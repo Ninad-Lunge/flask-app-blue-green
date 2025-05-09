@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: taskdef.json
+        TaskDefinition: "<TASK_DEFINITION>"
         LoadBalancerInfo:
-          ContainerName: "flask-app-2"
+          ContainerName: "flask-app"
           ContainerPort: 5000
