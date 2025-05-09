@@ -11,6 +11,11 @@ phases:
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
     commands:
+      - echo "--- Verifying Docker build context ---"
+      - ls -la
+      - cat Dockerfile
+      - cat requirements.txt || echo "requirements.txt not found"
+      - cat app.py || echo "app.py not found"
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latest .
