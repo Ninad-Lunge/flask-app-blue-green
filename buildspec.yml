@@ -30,5 +30,5 @@ phases:
       - sed "s|<IMAGE_URI>|$REPOSITORY_URI:$IMAGE_TAG|g" taskdef-template.json > taskdef.json
 artifacts:
   files:
-    - taskdef-template.json
+    - taskdef.json
     - appspec.yml
