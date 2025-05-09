@@ -21,10 +21,9 @@ phases:
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - echo Writing image definitions file...
-      - printf '[{"name":"flask-app-2","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - echo Creating taskdef.json with image URI...
+      - sed "s|<IMAGE_URI>|$REPOSITORY_URI:$IMAGE_TAG|g" taskdef-template.json > taskdef.json
 artifacts:
-    files: 
-      - imagedefinitions.json
-      - appspec.yaml
-      - taskdef.json
+  files:
+    - taskdef.json
+    - appspec.yaml
