@@ -40,7 +40,7 @@ def hello():
     <body>
         <div class="container">
             <h1>🎉 Deployment Successful! 🎉</h1>
-            <p>CICD Pipeline in Blue Green Deployment!!</p>
+            <p>CICD Pipeline in Blue Green Deployment with Changes!!</p>
         </div>
     </body>
     </html>
