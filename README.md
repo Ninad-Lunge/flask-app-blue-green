@@ -63,7 +63,9 @@ docker push <your-account-id>.dkr.ecr.<your-region>.amazonaws.com/flask-app:late
 ![image](https://github.com/user-attachments/assets/456694dc-7fde-4f1b-8aaf-a95c890a5e52)
 
 * Set health check path (e.g., `/health`).
-* Security group should allow inbound HTTP (port 80) and custom port 5000 if used.
+* Security group should allow inbound HTTP (port 80) and custom port 5000.
+
+![image](https://github.com/user-attachments/assets/0893d077-0447-47a6-be32-8eb954830dad)
 
 ![ALB Config](https://github.com/user-attachments/assets/b6949088-8979-4aab-b3ca-100f25bbf9ab)
 
